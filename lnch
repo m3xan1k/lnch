@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+bindirs=`echo $PATH | tr ':' '\n'`
+
+binfiles=""
+
+for directory in $bindirs; do
+    binfiles="$binfiles $(ls -tdQ $directory/* | xargs | tr ' ' '\n')"
+done
+
+executable=`printf '%s\n' $binfiles | fzf`
+
+nohup $executable &> /dev/null &disown
+
+sleep 0
