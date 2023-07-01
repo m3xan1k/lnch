@@ -14,7 +14,7 @@ This software is distributed under `Do What The Fuck You Want To` licence.
 ## Usage
 It's designed to run in a "popup" terminal, alacritty, st, gnome-terminal or whatever you use.
 
-Firstly create symlink or move lnch to your `$PATH`, f.e. `~/.local/bin`.
+Firstly create symlink or move lnch to your `$PATH`, f.e. `~/.local/bin` OR run `make install`.
 
 Then I just bind new system-wide shortcut to something like this.
 
