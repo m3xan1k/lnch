@@ -1,2 +1,2 @@
 install:
-  cp lnch ~/.local/bin
+	cp lnch ~/.local/bin
