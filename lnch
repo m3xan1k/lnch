@@ -5,7 +5,10 @@ bindirs=`echo $PATH | tr ':' '\n'`
 binfiles=""
 
 for directory in $bindirs; do
-    binfiles="$binfiles $(ls -tdQ $directory/* | xargs | tr ' ' '\n')"
+    if [ "$(ls -A $directory)" ]
+    then
+        binfiles="$binfiles $(ls -tdQ $directory/* | xargs | tr ' ' '\n')"
+    fi
 done
 
 executable=`printf '%s\n' $binfiles | fzf`
