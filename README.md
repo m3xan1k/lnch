@@ -6,6 +6,10 @@ Simple stupid application launcher. Not pretty, but mostly works in my cases.
 This software is distributed under `Do What The Fuck You Want To` licence.
 
 
+## Dependencies
+`fzf`
+
+
 ## Demo
 
 ![](https://raw.githubusercontent.com/m3xan1k/lnch/master/assets/lnch.gif)
@@ -26,4 +30,8 @@ alacritty \
   -o "window.dimensions.columns=60" \
   -o "window.dimensions.lines=10" \
   -e lnch
+```
+Or
+```
+mate-terminal --geometry=60x10+540+320 -e lnch
 ```
