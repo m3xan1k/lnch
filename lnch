@@ -5,7 +5,7 @@ bindirs=`echo $PATH | tr ':' '\n'`
 binfiles=""
 
 for directory in $bindirs; do
-    if [ "$(ls -A $directory)" ]
+    if [[ -d $directory && "$(ls -A $directory)" ]]
     then
         binfiles="$binfiles $(ls -tdQ $directory/* | xargs | tr ' ' '\n')"
     fi
